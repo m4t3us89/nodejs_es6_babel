@@ -1,7 +1,6 @@
 import api from '../../services/axios'
 
 const orderBy = (data,order = 'asc')=>{
-    console.log('xaxa')
     return data.sort( (a,b)=>{
         if( order == 'asc' ) {
             if(  a.title  >  b.title  ) return 1
@@ -22,7 +21,6 @@ class Ordernacao{
             
             return res.status(201).send( todosOrderBy )
         }catch(err){
-            console.log('entrou')
             return res.status(400).send( {
                 message: 'Error'
             } )
